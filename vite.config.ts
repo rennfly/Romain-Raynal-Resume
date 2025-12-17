@@ -16,8 +16,8 @@ export default defineConfig({
     cssCodeSplit: false, // Do not split CSS
     reportCompressedSize: false,
     rollupOptions: {
-      inlineDynamicImports: true,
       output: {
+        inlineDynamicImports: true,
         manualChunks: undefined,
       },
     },
