@@ -70,22 +70,20 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ data }) => {
         )}
       </div>
 
-      {/* Expandable Content */}
+      {/* Expandable Content - Robust Max-Height Animation */}
       <div 
-        className={`grid transition-all duration-300 ease-in-out ${
-          isOpen ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
         }`}
       >
-        <div className="overflow-hidden min-h-0">
-          <ul className="space-y-2 pb-1">
-            {data.details.map((detail, index) => (
-              <li key={index} className="flex items-start gap-3 text-slate-300">
-                <span className="mt-2 w-1.5 h-1.5 bg-amber-500 rounded-full shrink-0" />
-                <span className="leading-relaxed">{detail}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="space-y-2 pb-1">
+          {data.details.map((detail, index) => (
+            <li key={index} className="flex items-start gap-3 text-slate-300 w-full">
+              <span className="mt-2 w-1.5 h-1.5 bg-amber-500 rounded-full shrink-0" />
+              <span className="leading-relaxed flex-1 break-words">{detail}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
