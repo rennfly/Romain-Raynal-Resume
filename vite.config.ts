@@ -8,12 +8,13 @@ export default defineConfig({
     react(),
     viteSingleFile() // This forces all JS and CSS to be inlined into the HTML
   ],
+  base: './', // CRITICAL for Odoo: Makes paths relative so it works as an attachment
   build: {
     target: "esnext",
     assetsInlineLimit: 100000000, // Large limit to ensure everything is inlined
     chunkSizeWarningLimit: 100000000,
     cssCodeSplit: false, // Do not split CSS
-    brotliSize: false,
+    reportCompressedSize: false,
     rollupOptions: {
       inlineDynamicImports: true,
       output: {
