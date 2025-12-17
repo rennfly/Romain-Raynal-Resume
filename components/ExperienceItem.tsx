@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Briefcase, ExternalLink } from 'lucide-react';
+import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { Experience } from '../types';
 
 interface ExperienceItemProps {
