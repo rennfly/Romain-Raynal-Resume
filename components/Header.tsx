@@ -39,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl,
                   src={avatarUrl} 
                   alt={name} 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
+                  onError={() => {
                     console.error("Error loading profile image:", avatarUrl);
                     setImgError(true);
                   }}
