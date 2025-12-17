@@ -1,6 +1,7 @@
 export interface Experience {
   id: string;
   role: string;
+  projectName?: string;
   company: string;
   location?: string;
   period: string;

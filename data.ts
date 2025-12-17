@@ -20,29 +20,32 @@ export const resumeData: ResumeData = {
     {
       id: "arcades",
       role: "Sound Designer",
+      projectName: "Maestro",
       company: "Arcades, Double Jack",
       period: "Since 09/2025",
       url: "https://maestro-game.com/",
       details: [
         "Designed and produced original sound assets.",
-        "Mix orchestral recordings.",
-        "Working on the project Maestro."
+        "Mix orchestral recordings."
       ]
     },
     {
       id: "slope",
       role: "Trainer & Content Creator",
+      projectName: "FMOD Online formation",
       company: "Slope Training (France)",
       period: "Since 08/2025",
       url: "https://slopetraining.com/",
       details: [
         "Designed and produced a video training course on FMOD.",
-        "Created educational content to support game audio professionals."
+        "Created educational content to support game audio professionals.",
+        "Provide student monitoring and support."
       ]
     },
     {
       id: "universe",
       role: "Sound Designer",
+      projectName: "Persevere",
       company: "Universe or Nothing Limited (Ireland)",
       period: "Since 08/2025",
       url: "https://perseveregame.com/",
@@ -54,6 +57,7 @@ export const resumeData: ResumeData = {
     {
       id: "awesome-1",
       role: "Composer, Sound Designer",
+      projectName: "Witch Hunters",
       company: "Awesome Game Concepts (France)",
       period: "Since 02/2025",
       url: "https://store.steampowered.com/app/3528000/Witch_Hunters/",
@@ -65,11 +69,12 @@ export const resumeData: ResumeData = {
     {
       id: "fractal",
       role: "Sound Designer",
-      company: "Fractal Edge Music",
+      projectName: "LavaLoop",
+      company: "Fractal Edge Music / Louis Rigaud",
       period: "09/2024 - 12/2024",
       url: "https://store.steampowered.com/app/3017100/LavaLoop/",
       details: [
-        "Designed and integrated sound assets for the game demo LavaLoop.",
+        "Designed and integrated sound assets.",
         "Managed integration in Wwise and mixing in Unity.",
         "Contributed to a project featured in the finals of the 2024 Game Cup."
       ]
@@ -77,11 +82,12 @@ export const resumeData: ResumeData = {
     {
       id: "awesome-2",
       role: "Audio Producer",
+      projectName: "Need for Touring",
       company: "Awesome Game Concepts, Carfooly",
       period: "07/2024 - 09/2024",
       url: "https://needfortouring.com/",
       details: [
-        "Defined and implemented the audio direction for Need for Touring.",
+        "Defined and implemented the audio direction.",
         "Created sound assets and original music.",
         "Set up FMOD sessions and mixed the entire game audio."
       ]
@@ -89,11 +95,12 @@ export const resumeData: ResumeData = {
     {
       id: "ukiyo",
       role: "Sound Designer",
+      projectName: "Transhumance",
       company: "Ukiyo Studio",
       period: "05/2024 - 07/2024",
       url: "https://store.steampowered.com/curator/44733926",
       details: [
-        "Designed and recorded sound assets for the game prototype Transhumance.",
+        "Designed and recorded sound assets.",
         "Integrated assets via FMOD in Unreal Engine 5.",
         "Produced and mixed trailers and integrated music."
       ]
@@ -101,6 +108,7 @@ export const resumeData: ResumeData = {
     {
       id: "amanclo",
       role: "Sound Designer, Composer",
+      projectName: "The Green Room Experiment",
       company: "Amanclo Video Games",
       period: "01/2023 - 05/2024",
       details: [

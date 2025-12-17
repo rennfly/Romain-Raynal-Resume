@@ -29,8 +29,14 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ data }) => {
       >
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-2">
           <div className="flex-1">
-            <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-2">
-              {data.role}
+            <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors flex flex-col sm:flex-row sm:items-center sm:gap-2">
+              <span>{data.role}</span>
+              {data.projectName && (
+                <>
+                   <span className="hidden sm:inline text-slate-600">•</span>
+                   <span className="text-amber-500 font-medium tracking-wide">{data.projectName}</span>
+                </>
+              )}
             </h3>
             
             <div className="flex items-center gap-2 mt-1">
