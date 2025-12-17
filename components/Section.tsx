@@ -10,9 +10,9 @@ interface SectionProps {
 export const Section: React.FC<SectionProps> = ({ title, children, className = "", icon }) => {
   return (
     <section className={`mb-12 ${className}`}>
-      <div className="flex items-center gap-3 mb-6 border-b border-slate-700 pb-3">
-        {icon && <span className="text-amber-500">{icon}</span>}
-        <h2 className="text-2xl font-bold text-white uppercase tracking-wider">{title}</h2>
+      <div className="flex items-center gap-3 mb-6 border-b border-[#171F1C]/10 pb-3">
+        {icon && <span className="text-[#92400E]">{icon}</span>}
+        <h2 className="text-xl font-bold text-[#171F1C] uppercase tracking-[0.2em]">{title}</h2>
       </div>
       {children}
     </section>

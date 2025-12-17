@@ -6,7 +6,7 @@ export const resumeData: ResumeData = {
   // Note: These Google Drive files must be set to "Anyone with the link" to be visible.
   // We use the 'thumbnail' endpoint which is more reliable for embedding images.
   avatarUrl: "https://drive.google.com/thumbnail?id=11oUP7a-5BWNktFp5q46VF9R7zudEr3kw&sz=w1000", 
-  logoUrl: "https://drive.google.com/thumbnail?id=1FCfcyWhVFVX-qUQwXqRZeBMLxrOMAWSL&sz=w1000",
+  logoUrl: "https://drive.google.com/thumbnail?id=18qM3M7fZa5HOyf5FUvncmK7zZNiIWxX1&sz=w1000",
   cvUrl: "https://drive.google.com/uc?export=download&id=1QNcLKFk9t_0TkfCq297nXzUQoReq0JyB",
   contact: {
     location: "Sigean (Aude), France",
