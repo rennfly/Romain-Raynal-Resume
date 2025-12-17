@@ -76,8 +76,8 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ data }) => {
           isOpen ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'
         }`}
       >
-        <div className="overflow-hidden">
-          <ul className="space-y-2">
+        <div className="overflow-hidden min-h-0">
+          <ul className="space-y-2 pb-1">
             {data.details.map((detail, index) => (
               <li key={index} className="flex items-start gap-3 text-slate-300">
                 <span className="mt-2 w-1.5 h-1.5 bg-amber-500 rounded-full shrink-0" />
