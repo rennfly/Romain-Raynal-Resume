@@ -111,22 +111,35 @@ function App() {
         {/* Portfolio Section */}
         <Section title="Portfolio" icon={<PlayCircle size={24} />}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/20 p-6 rounded-xl border border-[#171F1C]/5">
-            {/* 
-                AJOUTER VOS VIDÉOS ICI
-                Ajoutez les ID Youtube séparés par des virgules pour activer le carrousel.
-                Exemple: ['ID_VIDEO_1', 'ID_VIDEO_2']
-            */}
             <VideoCarousel 
               title="Sound Design" 
-              videoIds={['DT-2ucQjcfU', 'DT-2ucQjcfU']} 
+              videoIds={[
+                'DT-2ucQjcfU',
+                'DGEmeXu2wSI',
+                'wsPgfT2Vj8Q',
+                'UX-CkAX8GB0',
+                'beoz9yPgYsg',
+                'uoFpSvnUjCQ',
+                'Xb5mdtCFzDc'
+              ]} 
             />
             <VideoCarousel 
               title="Composition" 
-              videoIds={['aMqrpzTirok', 'aMqrpzTirok']} 
+              videoIds={[
+                'aMqrpzTirok',
+                '_GRvuWUAwEo',
+                '6wvPF80r0vk',
+                'BjlTkkZUgSU',
+                '8_HIGilSTM8'
+              ]} 
             />
             <VideoCarousel 
               title="Music Design" 
-              videoIds={['U33Eb9WWaPo', 'U33Eb9WWaPo']} 
+              videoIds={[
+                'U33Eb9WWaPo',
+                'olMWCwbhGm0',
+                'pYCcWYQ2fZ8'
+              ]} 
             />
           </div>
         </Section>
