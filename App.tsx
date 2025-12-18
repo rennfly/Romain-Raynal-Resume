@@ -18,19 +18,35 @@ const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] 
 
   return (
     <div className="space-y-3">
-      <h4 className="text-[#171F1C] font-bold text-sm uppercase tracking-wider flex items-center justify-between gap-2">
+      <h4 className="text-[#171F1C] font-bold text-sm uppercase tracking-wider flex items-center justify-between gap-2 h-8">
         <span className="flex items-center gap-2">
           <PlayCircle size={16} className="text-[#92400E]" />
           {title}
         </span>
         {videoIds.length > 1 && (
-          <span className="text-xs text-[#171F1C]/40 font-normal normal-case">
-            {currentIndex + 1} / {videoIds.length}
-          </span>
+          <div className="flex items-center gap-1 bg-white/60 border border-[#171F1C]/10 rounded-md px-1 py-0.5 shadow-sm">
+            <button 
+              onClick={prevVideo}
+              className="text-[#171F1C]/70 hover:text-[#92400E] transition-colors p-1 hover:bg-black/5 rounded"
+              aria-label="Previous video"
+            >
+              <ChevronLeft size={14} />
+            </button>
+            <span className="text-xs text-[#171F1C]/70 font-semibold normal-case min-w-[32px] text-center select-none tabular-nums">
+              {currentIndex + 1} / {videoIds.length}
+            </span>
+            <button 
+              onClick={nextVideo}
+              className="text-[#171F1C]/70 hover:text-[#92400E] transition-colors p-1 hover:bg-black/5 rounded"
+              aria-label="Next video"
+            >
+              <ChevronRight size={14} />
+            </button>
+          </div>
         )}
       </h4>
       
-      <div className="relative group">
+      <div className="relative">
         <div className="aspect-video w-full rounded-lg overflow-hidden border border-[#171F1C]/10 bg-black shadow-sm relative z-0">
           <iframe 
             key={videoIds[currentIndex]} // Force reload on change
@@ -43,26 +59,6 @@ const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] 
             allowFullScreen
           ></iframe>
         </div>
-
-        {/* Navigation Arrows - Only show if multiple videos */}
-        {videoIds.length > 1 && (
-          <>
-            <button 
-              onClick={prevVideo}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#171F1C] p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm"
-              aria-label="Previous video"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button 
-              onClick={nextVideo}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#171F1C] p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm"
-              aria-label="Next video"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </>
-        )}
       </div>
     </div>
   );

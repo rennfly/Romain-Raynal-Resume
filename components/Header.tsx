@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl 
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+        <div className="flex flex-col md:flex-row gap-8 items-start">
           
           {/* Profile Photo */}
           <div className="shrink-0">
@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl 
           </div>
 
           {/* Main Info */}
-          <div className="flex-1 text-center md:text-left space-y-4">
+          <div className="flex-1 text-left space-y-4">
             <div className="space-y-1">
               {/* Simple Name Text */}
               <h1 className="text-3xl md:text-4xl font-semibold text-[#171F1C]">
@@ -59,7 +59,7 @@ export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl 
             </div>
 
             {/* Contact Grid */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-3 text-sm md:text-base text-[#171F1C]/70">
+            <div className="flex flex-wrap justify-start gap-x-6 gap-y-3 text-sm md:text-base text-[#171F1C]/70">
               <div className="flex items-center gap-2">
                 <MapPin size={16} className="text-[#92400E] shrink-0" />
                 <span>{contact.location}</span>
