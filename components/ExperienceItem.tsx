@@ -23,25 +23,25 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ data }) => {
         className="cursor-pointer group"
       >
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-2">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold text-[#171F1C] group-hover:text-[#92400E] transition-colors flex flex-col sm:flex-row sm:items-center sm:gap-2">
-              <span>{data.role}</span>
+          <div className="flex-1 pr-4">
+            <h3 className="text-lg font-bold text-[#171F1C] group-hover:text-[#92400E] transition-colors leading-snug">
+              <span className="block sm:inline">{data.role}</span>
               {data.projectName && (
                 <>
-                   <span className="hidden sm:inline text-[#171F1C]/20">•</span>
+                   <span className="hidden sm:inline mx-2 text-[#171F1C]/20">•</span>
                    {data.url ? (
                      <a 
                        href={data.url}
                        target="_blank"
                        rel="noopener noreferrer"
                        onClick={(e) => e.stopPropagation()}
-                       className="text-[#92400E] font-medium tracking-wide hover:underline inline-flex items-center gap-1.5"
+                       className="block sm:inline text-[#92400E] font-medium tracking-wide hover:underline mt-1 sm:mt-0"
                      >
                        {data.projectName}
-                       <ExternalLink size={14} className="opacity-60" />
+                       <ExternalLink size={14} className="opacity-60 inline-block ml-1.5 -translate-y-[1px]" />
                      </a>
                    ) : (
-                     <span className="text-[#92400E] font-medium tracking-wide">{data.projectName}</span>
+                     <span className="block sm:inline text-[#92400E] font-medium tracking-wide mt-1 sm:mt-0">{data.projectName}</span>
                    )}
                 </>
               )}
@@ -52,7 +52,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ data }) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 text-[#171F1C]/50 text-xs font-bold uppercase tracking-wider bg-[#E2DACF]/30 px-3 py-1 rounded-full self-start md:self-auto whitespace-nowrap mt-2 md:mt-0">
+          <div className="flex items-center gap-2 text-[#171F1C]/50 text-xs font-bold uppercase tracking-wider bg-[#E2DACF]/30 px-3 py-1 rounded-full self-start md:self-auto whitespace-nowrap mt-2 md:mt-0 shrink-0">
             {data.period}
             {isOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </div>

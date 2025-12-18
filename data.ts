@@ -4,7 +4,6 @@ export const resumeData: ResumeData = {
   name: "Romain Raynal",
   title: "Composer, Producer & Sound Designer",
   avatarUrl: "https://drive.google.com/thumbnail?id=11oUP7a-5BWNktFp5q46VF9R7zudEr3kw&sz=w1000", 
-  logoUrl: "https://drive.google.com/thumbnail?id=18qM3M7fZa5HOyf5FUvncmK7zZNiIWxX1&sz=w1000",
   cvUrl: "https://drive.google.com/uc?export=download&id=10xaRkQnm9pVIMsD8-iXliKzcz9DwNCUb",
   contact: {
     location: "Sigean (Aude), France",
@@ -110,7 +109,7 @@ export const resumeData: ResumeData = {
       projectName: "The Green Room Experiment",
       company: "Amanclo Video Games",
       period: "Since 01/2023",
-      url: "https://store.steampowered.com/app/2205560/The_Green_Room_Experiment/",
+      url: "https://store.steampowered.com/curator/44733926",
       details: [
         "Created ambient soundscapes for a first-person puzzle series.",
         "Composed non-diegetic music for in-game sequences and marketing trailers."

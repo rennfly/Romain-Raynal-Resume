@@ -3,25 +3,66 @@ import { Header } from './components/Header';
 import { Section } from './components/Section';
 import { ExperienceItem } from './components/ExperienceItem';
 import { resumeData } from './data';
-import { User, Briefcase, GraduationCap, Zap, Download, FileText, PlayCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { User, Briefcase, GraduationCap, Zap, Download, FileText, PlayCircle, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const PlaylistEmbed = ({ title, embedUrl }: { title: string, embedUrl: string }) => {
+const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextVideo = () => {
+    setCurrentIndex((prev) => (prev + 1) % videoIds.length);
+  };
+
+  const prevVideo = () => {
+    setCurrentIndex((prev) => (prev - 1 + videoIds.length) % videoIds.length);
+  };
+
   return (
     <div className="space-y-3">
-      <h4 className="text-[#171F1C] font-bold text-sm uppercase tracking-wider flex items-center gap-2">
-        <PlayCircle size={16} className="text-[#92400E]" />
-        {title}
+      <h4 className="text-[#171F1C] font-bold text-sm uppercase tracking-wider flex items-center justify-between gap-2">
+        <span className="flex items-center gap-2">
+          <PlayCircle size={16} className="text-[#92400E]" />
+          {title}
+        </span>
+        {videoIds.length > 1 && (
+          <span className="text-xs text-[#171F1C]/40 font-normal normal-case">
+            {currentIndex + 1} / {videoIds.length}
+          </span>
+        )}
       </h4>
-      <div className="aspect-video w-full rounded-lg overflow-hidden border border-[#171F1C]/10 bg-black shadow-sm">
-        <iframe 
-          src={embedUrl}
-          title={title}
-          className="w-full h-full"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+      
+      <div className="relative group">
+        <div className="aspect-video w-full rounded-lg overflow-hidden border border-[#171F1C]/10 bg-black shadow-sm relative z-0">
+          <iframe 
+            key={videoIds[currentIndex]} // Force reload on change
+            src={`https://www.youtube.com/embed/${videoIds[currentIndex]}`}
+            title={`${title} - Video ${currentIndex + 1}`}
+            className="w-full h-full"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        {/* Navigation Arrows - Only show if multiple videos */}
+        {videoIds.length > 1 && (
+          <>
+            <button 
+              onClick={prevVideo}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#171F1C] p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm"
+              aria-label="Previous video"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button 
+              onClick={nextVideo}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#171F1C] p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm"
+              aria-label="Next video"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </>
+        )}
       </div>
     </div>
   );
@@ -37,7 +78,6 @@ function App() {
         title={resumeData.title} 
         contact={resumeData.contact}
         avatarUrl={resumeData.avatarUrl}
-        logoUrl={resumeData.logoUrl}
       />
 
       <main className="max-w-6xl mx-auto px-6 md:px-12 py-12">
@@ -71,17 +111,21 @@ function App() {
         {/* Portfolio Section */}
         <Section title="Portfolio" icon={<PlayCircle size={24} />}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/20 p-6 rounded-xl border border-[#171F1C]/5">
-            <PlaylistEmbed 
+            {/* 
+                Pour ajouter plus de vidéos, ajoutez simplement les IDs YouTube dans les tableaux ci-dessous.
+                Exemple: ['ID1', 'ID2', 'ID3']
+            */}
+            <VideoCarousel 
               title="Sound Design" 
-              embedUrl="https://www.youtube.com/embed/DT-2ucQjcfU?si=qGnxB6SLzkfQdteo" 
+              videoIds={['DT-2ucQjcfU']} 
             />
-            <PlaylistEmbed 
+            <VideoCarousel 
               title="Composition" 
-              embedUrl="https://www.youtube.com/embed/aMqrpzTirok?si=aqdZYmlqWaV4DwrG" 
+              videoIds={['aMqrpzTirok']} 
             />
-            <PlaylistEmbed 
+            <VideoCarousel 
               title="Music Design" 
-              embedUrl="https://www.youtube.com/embed/U33Eb9WWaPo?si=gvCvmnzOROdlMfE9" 
+              videoIds={['U33Eb9WWaPo']} 
             />
           </div>
         </Section>

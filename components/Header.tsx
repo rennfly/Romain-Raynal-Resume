@@ -7,12 +7,10 @@ interface HeaderProps {
   title: string;
   contact: ContactInfo;
   avatarUrl?: string;
-  logoUrl?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl, logoUrl }) => {
+export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl }) => {
   const [imgError, setImgError] = useState(false);
-  const [logoError, setLogoError] = useState(false);
 
   // Background decoration provided by user
   const decorativeBgUrl = "https://drive.google.com/thumbnail?id=1geGVIy6ZjseN_1DGW6MHxwdo4v-0Xqez&sz=w1000";
@@ -52,24 +50,11 @@ export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl,
 
           {/* Main Info */}
           <div className="flex-1 text-center md:text-left space-y-4">
-            <div className="space-y-2">
-              {/* Logo / Name */}
-              <div className="flex justify-center md:justify-start h-16 md:h-20 items-center">
-                {!logoError && logoUrl ? (
-                  <img 
-                     src={logoUrl} 
-                     alt={name}
-                     className="h-full w-auto object-contain"
-                     referrerPolicy="no-referrer"
-                     onError={() => setLogoError(true)}
-                  />
-                ) : (
-                  <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#171F1C]">
-                    {name.split(' ')[0]} <span className="text-[#92400E]">{name.split(' ')[1]}</span>
-                  </h1>
-                )}
-              </div>
-              
+            <div className="space-y-1">
+              {/* Simple Name Text */}
+              <h1 className="text-3xl md:text-4xl font-semibold text-[#171F1C]">
+                {name}
+              </h1>
               <p className="text-xl md:text-2xl text-[#92400E] font-medium tracking-wide uppercase">{title}</p>
             </div>
 
