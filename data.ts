@@ -3,11 +3,9 @@ import { ResumeData } from './types';
 export const resumeData: ResumeData = {
   name: "Romain Raynal",
   title: "Composer, Producer & Sound Designer",
-  // Note: These Google Drive files must be set to "Anyone with the link" to be visible.
-  // We use the 'thumbnail' endpoint which is more reliable for embedding images.
   avatarUrl: "https://drive.google.com/thumbnail?id=11oUP7a-5BWNktFp5q46VF9R7zudEr3kw&sz=w1000", 
   logoUrl: "https://drive.google.com/thumbnail?id=18qM3M7fZa5HOyf5FUvncmK7zZNiIWxX1&sz=w1000",
-  cvUrl: "https://drive.google.com/uc?export=download&id=1QNcLKFk9t_0TkfCq297nXzUQoReq0JyB",
+  cvUrl: "https://drive.google.com/uc?export=download&id=10xaRkQnm9pVIMsD8-iXliKzcz9DwNCUb",
   contact: {
     location: "Sigean (Aude), France",
     phone: "06.63.68.03.30",
@@ -15,31 +13,32 @@ export const resumeData: ResumeData = {
     website: "www.romainraynal.fr",
     portfolioUrl: "https://www.romainraynal.fr/portfolio"
   },
-  summary: "I am Romain Raynal, a composer, producer, and sound designer based in Sigean, Aude. I studied at the conservatory and worked as a freelance musician for nearly 15 years, primarily as a bassist in jazz bands. In 2017, I completed a mixing course at the CFSM Center in Lyon. Following this, I founded my studio in Occitanie. In 2021, I earned a certification in film scoring from Studio Cap' in Paris, as well as certifications in interactive music using Wwise, and more recently, FMOD. Since 2023 I'm working as a composer and sound designer in the video game industry, contributing to titles such as The Green Room Experiment, Just a Guy, and as a sound designer at Ukiyo on Transhumance. Additionally, in 2024, I worked on the F2P mobile game Need For Touring by Carfooly, and the musical shooter LavaLoop. My latest ongoing project is Maestro.",
+  summary: "I present here a selection of projects illustrating my work in sound design, composition, and music design. My approach emphasises the care taken in the execution and attention to detail, with the aim of creating immersive sound experiences that serve the narrative and engage the player.",
+  fullBio: "Romain Raynal is a French composer, producer, and sound designer based in Sigean, Aude. He studied at the conservatory and worked as a freelance musician for nearly 15 years, primarily as a bassist in jazz bands. In 2017, he completed a mixing course at the CFSM Center in Lyon. Following this, he founded his studio in Occitanie. In 2021, he earned a certification in film scoring from Studio Cap’ in Paris, as well as certifications in interactive music using Wwise, and more recently, FMOD. Since 2023 he has been working as a composer and sound designer in the video game industry, contributing to titles such as The Green Room Experiment, Just a Guy, and as a sound designer at Ukiyo, founded by Thierry Platon (2Dark), on Transhumance, among others. Additionally, in 2024, he worked on the F2P mobile game Need For Touring by Carfooly, and the musical shooter LavaLoop, created by Louis Rigaud. His latest ongoing project is Maestro (Arcades, Double Jack), where he works as a sound designer and mix engineer.",
   experience: [
     {
       id: "arcades",
-      role: "Sound Designer",
+      role: "Sound Designer & Mix Engineer",
       projectName: "Maestro",
       company: "Arcades, Double Jack",
       period: "Since 09/2025",
       url: "https://maestro-game.com/",
       details: [
         "Designed and produced original sound assets.",
-        "Mix orchestral recordings."
+        "Mixed orchestral recordings for in-game implementation."
       ]
     },
     {
       id: "slope",
       role: "Trainer & Content Creator",
-      projectName: "FMOD Online formation",
+      projectName: "FMOD Online Course",
       company: "Slope Training (France)",
       period: "Since 08/2025",
       url: "https://slopetraining.com/",
       details: [
-        "Designed and produced a video training course on FMOD.",
+        "Designed and produced a comprehensive video training course on FMOD middleware.",
         "Created educational content to support game audio professionals.",
-        "Provide student monitoring and support."
+        "Provided technical support and student monitoring."
       ]
     },
     {
@@ -50,20 +49,20 @@ export const resumeData: ResumeData = {
       period: "Since 08/2025",
       url: "https://perseveregame.com/",
       details: [
-        "Designed and produced original sound assets.",
-        "Responsible for FMOD implementation of sound design and music and in-game mixing."
+        "Designed and produced original sound assets for sci-fi environments.",
+        "Responsible for FMOD implementation, interactive music systems, and in-game mixing."
       ]
     },
     {
       id: "awesome-1",
-      role: "Composer, Sound Designer",
+      role: "Composer & Sound Designer",
       projectName: "Witch Hunters",
       company: "Awesome Game Concepts (France)",
       period: "Since 02/2025",
       url: "https://store.steampowered.com/app/3528000/Witch_Hunters/",
       details: [
-        "Defined and implemented in FMOD the audio direction for Witch Hunters.",
-        "Created sound assets and original music."
+        "Defined and implemented the audio direction in FMOD.",
+        "Created custom sound assets and original musical score."
       ]
     },
     {
@@ -74,9 +73,9 @@ export const resumeData: ResumeData = {
       period: "09/2024 - 12/2024",
       url: "https://store.steampowered.com/app/3017100/LavaLoop/",
       details: [
-        "Designed and integrated sound assets.",
-        "Managed integration in Wwise and mixing in Unity.",
-        "Contributed to a project featured in the finals of the 2024 Game Cup."
+        "Designed and integrated rhythmic sound assets for a musical shooter.",
+        "Managed Wwise integration and mixing within Unity.",
+        "Project reached the finals of the 2024 Game Cup."
       ]
     },
     {
@@ -87,9 +86,9 @@ export const resumeData: ResumeData = {
       period: "07/2024 - 09/2024",
       url: "https://needfortouring.com/",
       details: [
-        "Defined and implemented the audio direction.",
-        "Created sound assets and original music.",
-        "Set up FMOD sessions and mixed the entire game audio."
+        "Audio direction lead for a F2P mobile racing game.",
+        "Created vehicle sound assets and original music.",
+        "Handled FMOD sessions and global game mixing."
       ]
     },
     {
@@ -100,20 +99,21 @@ export const resumeData: ResumeData = {
       period: "05/2024 - 07/2024",
       url: "https://store.steampowered.com/curator/44733926",
       details: [
-        "Designed and recorded sound assets.",
-        "Integrated assets via FMOD in Unreal Engine 5.",
-        "Produced and mixed trailers and integrated music."
+        "Recorded and designed original sound assets.",
+        "Implemented assets via FMOD into Unreal Engine 5.",
+        "Produced and mixed game trailers."
       ]
     },
     {
       id: "amanclo",
-      role: "Sound Designer, Composer",
+      role: "Sound Designer & Composer",
       projectName: "The Green Room Experiment",
       company: "Amanclo Video Games",
-      period: "01/2023 - 05/2024",
+      period: "Since 01/2023",
+      url: "https://store.steampowered.com/app/2205560/The_Green_Room_Experiment/",
       details: [
-        "Created ambient sound assets for The Green Room Experiment game series.",
-        "Composed non-diegetic music for in-game use and trailers."
+        "Created ambient soundscapes for a first-person puzzle series.",
+        "Composed non-diegetic music for in-game sequences and marketing trailers."
       ]
     }
   ],
@@ -121,33 +121,35 @@ export const resumeData: ResumeData = {
     {
       id: "cap",
       institution: "Studio Capitale Enseignement (Paris)",
-      degree: "Degree in Film Scoring",
-      year: "Dec 2022",
-      certificateUrl: "https://drive.google.com/file/d/1uNCf4pFDBEfr79JBhZyR20BWF3YUG7II/view?usp=sharing"
+      degree: "Certification in Film Scoring",
+      year: "2022",
+      certificateUrl: "https://drive.google.com/file/d/1uNCf4pFDBEfr79JBhZyR20BWF3YUG7II/view?usp=sharing",
+      institutionUrl: "http://www.studiocapitale.com/"
     },
     {
       id: "wwise-201",
-      institution: "WWISE - Audiokinetic",
-      degree: "WWISE - 201 - Interactive Music",
-      year: "Jan 2021",
-      certificateUrl: "https://drive.google.com/file/d/1E5lnL5YndTJl5nA64onjM1IkLL9AO-cS/view?usp=sharing"
+      institution: "Audiokinetic",
+      degree: "Wwise-201 - Interactive Music Certification",
+      year: "2021",
+      certificateUrl: "https://drive.google.com/file/d/1E5lnL5YndTJl5nA64onjM1IkLL9AO-cS/view?usp=sharing",
+      institutionUrl: "https://www.audiokinetic.com/fr/"
     },
     {
       id: "cfsm",
       institution: "CFSM Center (Lyon)",
-      degree: "Mixing and Mastering",
-      year: "2018"
+      degree: "Professional Mixing and Mastering Course",
+      year: "2018",
+      institutionUrl: "https://cfsm-center.fr/"
     }
   ],
   skills: [
-    "Composer",
+    "Musical Composition",
     "Sound Design",
-    "Mix Engineer",
+    "Mixing & Mastering",
     "FMOD",
     "Wwise",
-    "Attentive Listener",
-    "Open to Feedback",
-    "Versatile",
-    "Creative"
+    "Technical Audio Implementation",
+    "Creative Direction",
+    "Versatile Genre Expertise"
   ]
 };

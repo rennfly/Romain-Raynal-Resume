@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Globe, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 import { ContactInfo } from '../types';
 
 interface HeaderProps {
@@ -92,21 +92,6 @@ export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl,
                 <span>{contact.website}</span>
               </a>
             </div>
-          </div>
-
-          {/* CTA Button - Using #E2DACF as requested */}
-          <div className="shrink-0 mt-2 md:mt-0">
-            {contact.portfolioUrl && (
-                <a 
-                  href={contact.portfolioUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#E2DACF] hover:brightness-95 text-[#171F1C] px-6 py-3 rounded-lg font-bold shadow-sm border border-[#171F1C]/5 transition-all hover:scale-105"
-                >
-                  <ExternalLink size={18} />
-                  <span>Portfolio</span>
-                </a>
-            )}
           </div>
         </div>
       </div>

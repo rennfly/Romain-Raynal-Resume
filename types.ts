@@ -15,6 +15,7 @@ export interface Education {
   degree: string;
   year: string;
   certificateUrl?: string;
+  institutionUrl?: string;
 }
 
 export interface Skill {
@@ -34,6 +35,7 @@ export interface ResumeData {
   name: string;
   title: string;
   summary: string;
+  fullBio: string;
   avatarUrl?: string;
   logoUrl?: string;
   cvUrl?: string;
