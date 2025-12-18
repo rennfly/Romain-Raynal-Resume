@@ -112,20 +112,21 @@ function App() {
         <Section title="Portfolio" icon={<PlayCircle size={24} />}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/20 p-6 rounded-xl border border-[#171F1C]/5">
             {/* 
-                Pour ajouter plus de vidéos, ajoutez simplement les IDs YouTube dans les tableaux ci-dessous.
-                Exemple: ['ID1', 'ID2', 'ID3']
+                AJOUTER VOS VIDÉOS ICI
+                Ajoutez les ID Youtube séparés par des virgules pour activer le carrousel.
+                Exemple: ['ID_VIDEO_1', 'ID_VIDEO_2']
             */}
             <VideoCarousel 
               title="Sound Design" 
-              videoIds={['DT-2ucQjcfU']} 
+              videoIds={['DT-2ucQjcfU', 'DT-2ucQjcfU']} 
             />
             <VideoCarousel 
               title="Composition" 
-              videoIds={['aMqrpzTirok']} 
+              videoIds={['aMqrpzTirok', 'aMqrpzTirok']} 
             />
             <VideoCarousel 
               title="Music Design" 
-              videoIds={['U33Eb9WWaPo']} 
+              videoIds={['U33Eb9WWaPo', 'U33Eb9WWaPo']} 
             />
           </div>
         </Section>

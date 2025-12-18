@@ -142,13 +142,12 @@ export const resumeData: ResumeData = {
     }
   ],
   skills: [
-    "Musical Composition",
-    "Sound Design",
-    "Mixing & Mastering",
     "FMOD",
     "Wwise",
-    "Technical Audio Implementation",
-    "Creative Direction",
-    "Versatile Genre Expertise"
+    "Reaper",
+    "Musical Composition",
+    "Music Design",
+    "Creative and open to feedback",
+    "Sound Design"
   ]
 };
