@@ -96,7 +96,7 @@ export const resumeData: ResumeData = {
       projectName: "Transhumance",
       company: "Ukiyo Studio",
       period: "05/2024 - 07/2024",
-      url: "https://store.steampowered.com/curator/44733926",
+      url: "https://afjv.com/societe/1381-ukiyo-studio.htm",
       details: [
         "Recorded and designed original sound assets.",
         "Implemented assets via FMOD into Unreal Engine 5.",
