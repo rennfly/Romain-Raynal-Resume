@@ -4,7 +4,7 @@ export const resumeData: ResumeData = {
   name: "Romain Raynal",
   title: "Composer, Producer & Sound Designer",
   avatarUrl: "https://drive.google.com/thumbnail?id=11oUP7a-5BWNktFp5q46VF9R7zudEr3kw&sz=w1000", 
-  cvUrl: "https://drive.google.com/uc?export=download&id=10xaRkQnm9pVIMsD8-iXliKzcz9DwNCUb",
+  cvUrl: "https://drive.google.com/uc?export=download&id=1YxiaGbHf5EyVLCjaSDD9-xAKJbJSMvrb",
   contact: {
     location: "Sigean (Aude), France",
     phone: "06.63.68.03.30",
@@ -13,8 +13,19 @@ export const resumeData: ResumeData = {
     portfolioUrl: "https://www.romainraynal.fr/portfolio"
   },
   summary: "I present here a selection of projects illustrating my work in sound design, composition, and music design. My approach emphasises the care taken in the execution and attention to detail, with the aim of creating immersive sound experiences that serve the narrative and engage the player.",
-  fullBio: "Romain Raynal is a French composer, producer, and sound designer based in Sigean, Aude. He studied at the conservatory and worked as a freelance musician for nearly 15 years, primarily as a bassist in jazz bands. In 2017, he completed a mixing course at the CFSM Center in Lyon. Following this, he founded his studio in Occitanie. In 2021, he earned a certification in film scoring from Studio Cap’ in Paris, as well as certifications in interactive music using Wwise, and more recently, FMOD. Since 2023 he has been working as a composer and sound designer in the video game industry, contributing to titles such as The Green Room Experiment, Just a Guy, and as a sound designer at Ukiyo, founded by Thierry Platon (2Dark), on Transhumance, among others. Additionally, in 2024, he worked on the F2P mobile game Need For Touring by Carfooly, and the musical shooter LavaLoop, created by Louis Rigaud. His latest ongoing project is Maestro (Arcades, Double Jack), where he works as a sound designer and mix engineer.",
+  fullBio: "I am Romain Raynal, a composer, producer, and sound designer based in Sigean, Aude. I studied at the conservatory and worked as a freelance musician for nearly 15 years, primarily as a bassist in jazz bands. In 2017, I completed a mixing course at the CFSM Center in Lyon before founding my studio in Occitanie. In 2021, I earned a certification in film scoring from Studio Cap’ in Paris, alongside Wwise and FMOD certifications.\n\nSince 2023, I have contributed to titles such as The Green Room Experiment, Just a Guy, and Transhumance (Ukiyo). In 2024, I worked on the mobile game Need For Touring and the musical shooter LavaLoop. Recently, I handled linear sound design for Unreal cinematics and composed diegetic music for fictional media inserts on an unannounced AA title (Arcade Sounds).\n\nMy latest ongoing project is Maestro (Arcades, Double Jack), where I work as a sound designer and mix engineer. I also share my technical expertise through an upcoming Audiokinetic blog post and an Unreal Engine audio course I authored for Slope.",
   experience: [
+    {
+      id: "arcade-sounds",
+      role: "Sound Designer, Composer",
+      projectName: "Unannounced AA Title (NDA)",
+      company: "Arcade Sounds",
+      period: "Since 11/2025",
+      details: [
+        "Cinematic Sound Design: Linear audio post-production for Unreal Engine cutscenes (Reaper workflow).",
+        "Music Composition: Created themes for short narrative capsules."
+      ]
+    },
     {
       id: "arcades",
       role: "Sound Designer & Mix Engineer",
@@ -147,6 +158,7 @@ export const resumeData: ResumeData = {
     "Reaper",
     "Musical Composition",
     "Music Design",
+    "Cinematic Sound Design",
     "Creative and open to feedback",
     "Sound Design"
   ]
