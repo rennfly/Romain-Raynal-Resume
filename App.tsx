@@ -81,9 +81,10 @@ function App() {
         {/* Summary Section with Expandable Bio */}
         <Section title="Summary" icon={<User size={24} />}>
           <div className="bg-white/40 p-6 rounded-lg border border-[#171F1C]/5 shadow-sm space-y-4">
-            <p className="leading-relaxed text-lg text-[#171F1C]/80">
-              {resumeData.summary}
-            </p>
+            <p 
+              className="leading-relaxed text-lg text-[#171F1C]/80 text-justify"
+              dangerouslySetInnerHTML={{ __html: resumeData.summary }}
+            />
             
             <button 
               onClick={() => setIsBioOpen(!isBioOpen)}
@@ -97,9 +98,10 @@ function App() {
             </button>
 
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isBioOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
-              <div className="pt-4 border-t border-[#171F1C]/5 text-[#171F1C]/70 leading-relaxed whitespace-pre-line">
-                {resumeData.fullBio}
-              </div>
+              <div 
+                className="pt-4 border-t border-[#171F1C]/5 text-[#171F1C]/70 leading-relaxed text-justify space-y-4"
+                dangerouslySetInnerHTML={{ __html: resumeData.fullBio.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br/>')}</p>`).join('') }}
+              />
             </div>
           </div>
         </Section>

@@ -12,15 +12,16 @@ export const resumeData: ResumeData = {
     website: "www.romainraynal.fr",
     portfolioUrl: "https://www.romainraynal.fr/portfolio"
   },
-  summary: "I present here a selection of projects illustrating my work in sound design, composition, and music design. My approach emphasises the care taken in the execution and attention to detail, with the aim of creating immersive sound experiences that serve the narrative and engage the player.",
-  fullBio: "I am Romain Raynal, a composer, producer, and sound designer based in Sigean, Aude. I studied at the conservatory and worked as a freelance musician for nearly 15 years, primarily as a bassist in jazz bands. In 2017, I completed a mixing course at the CFSM Center in Lyon before founding my studio in Occitanie. In 2021, I earned a certification in film scoring from Studio Cap’ in Paris, alongside Wwise and FMOD certifications.\n\nSince 2023, I have contributed to titles such as The Green Room Experiment, Just a Guy, and Transhumance (Ukiyo). In 2024, I worked on the mobile game Need For Touring and the musical shooter LavaLoop. Recently, I handled linear sound design for Unreal cinematics and composed diegetic music for fictional media inserts on an unannounced AA title (Arcade Sounds).\n\nMy latest ongoing project is Maestro (Arcades, Double Jack), where I work as a sound designer and mix engineer. I also share my technical expertise through an upcoming Audiokinetic blog post and an Unreal Engine audio course I authored for Slope.",
+  summary: "I present here a selection of projects illustrating my work in <strong>sound design</strong>, <strong>composition</strong>, and <strong>music design</strong>. My approach emphasises the care taken in the execution and attention to detail, with the aim of creating <strong>immersive sound experiences</strong> that serve the <strong>narrative</strong> and <strong>engage the player</strong>.",
+  fullBio: "I am <strong>Romain Raynal</strong>, a <strong>composer</strong>, <strong>producer</strong>, and <strong>sound designer</strong> based in Sigean, Aude, France. I studied at the conservatory and worked as a freelance musician for nearly 15 years. In 2017, I completed a <strong>mixing course</strong> at the CFSM Center in Lyon before founding my studio. In 2021, I earned a <strong>certification in film scoring</strong> from Studio Cap’ in Paris and became <strong>Wwise Certified</strong>, while also acquiring proficiency in <strong>FMOD</strong>.\n\nSince 2023, I have contributed to titles such as The Green Room Experiment, Just a Guy, and Transhumance (Ukiyo). In 2024, I worked on the mobile game Need For Touring and the musical shooter LavaLoop. Recently, I handled <strong>linear sound design</strong> for <strong>Unreal cinematics</strong> and composed <strong>diegetic music</strong> for fictional media inserts on an unannounced AA title (<strong>Arcades Sound</strong>).\n\nMy latest ongoing project is <strong>Maestro</strong> (<strong>Arcades Sound</strong>, Double Jack), where I work as a <strong>sound designer</strong> and <strong>mix engineer</strong>. I also share my technical expertise through an upcoming <strong>Audiokinetic blog post</strong> and an <strong>FMOD and Unreal Engine audio course</strong> I authored for Slope.",
   experience: [
     {
       id: "arcade-sounds",
       role: "Sound Designer, Composer",
-      projectName: "Unannounced AA Title (NDA)",
-      company: "Arcade Sounds",
+      projectName: "Unannounced AA Titles (NDA)",
+      company: "Arcades Sound",
       period: "Since 11/2025",
+      url: "https://www.arcades-sound.fr/",
       details: [
         "Cinematic Sound Design: Linear audio post-production for Unreal Engine cutscenes (Reaper workflow).",
         "Music Composition: Created themes for short narrative capsules."
@@ -30,7 +31,7 @@ export const resumeData: ResumeData = {
       id: "arcades",
       role: "Sound Designer & Mix Engineer",
       projectName: "Maestro",
-      company: "Arcades, Double Jack",
+      company: "Arcades Sound, Double Jack",
       period: "Since 09/2025",
       url: "https://maestro-game.com/",
       details: [
