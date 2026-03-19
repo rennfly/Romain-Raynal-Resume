@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import { Section } from './components/Section';
 import { ExperienceItem } from './components/ExperienceItem';
 import { resumeData } from './data';
-import { User, Briefcase, GraduationCap, Zap, Download, FileText, PlayCircle, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
+import { User, Briefcase, GraduationCap, Zap, Download, FileText, PlayCircle, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Music } from 'lucide-react';
 
 const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,7 +47,7 @@ const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] 
       </h4>
       
       <div className="relative">
-        <div className="aspect-video w-full rounded-lg overflow-hidden border border-[#171F1C]/10 bg-black shadow-sm relative z-0">
+        <div className="h-[152px] w-full rounded-lg overflow-hidden border border-[#171F1C]/10 bg-black shadow-sm relative z-0">
           <iframe 
             key={videoIds[currentIndex]} // Force reload on change
             src={`https://www.youtube.com/embed/${videoIds[currentIndex]}`}
@@ -57,6 +57,66 @@ const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SpotifyCarousel = ({ title, albumIds }: { title: string, albumIds: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextAlbum = () => {
+    setCurrentIndex((prev) => (prev + 1) % albumIds.length);
+  };
+
+  const prevAlbum = () => {
+    setCurrentIndex((prev) => (prev - 1 + albumIds.length) % albumIds.length);
+  };
+
+  return (
+    <div className="space-y-3">
+      <h4 className="text-[#171F1C] font-bold text-sm uppercase tracking-wider flex items-center justify-between gap-2 h-8">
+        <span className="flex items-center gap-2">
+          <Music size={16} className="text-[#92400E]" />
+          {title}
+        </span>
+        {albumIds.length > 1 && (
+          <div className="flex items-center gap-1 bg-white/60 border border-[#171F1C]/10 rounded-md px-1 py-0.5 shadow-sm">
+            <button 
+              onClick={prevAlbum}
+              className="text-[#171F1C]/70 hover:text-[#92400E] transition-colors p-1 hover:bg-black/5 rounded"
+              aria-label="Previous album"
+            >
+              <ChevronLeft size={14} />
+            </button>
+            <span className="text-xs text-[#171F1C]/70 font-semibold normal-case min-w-[32px] text-center select-none tabular-nums">
+              {currentIndex + 1} / {albumIds.length}
+            </span>
+            <button 
+              onClick={nextAlbum}
+              className="text-[#171F1C]/70 hover:text-[#92400E] transition-colors p-1 hover:bg-black/5 rounded"
+              aria-label="Next album"
+            >
+              <ChevronRight size={14} />
+            </button>
+          </div>
+        )}
+      </h4>
+      
+      <div className="relative">
+        <div className="h-[152px] w-full rounded-xl overflow-hidden shadow-sm relative z-0">
+          <iframe 
+            key={albumIds[currentIndex]} // Force reload on change
+            src={`https://open.spotify.com/embed/album/${albumIds[currentIndex]}?utm_source=generator`}
+            title={`${title} - Album ${currentIndex + 1}`}
+            className="w-full h-full"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            allowFullScreen
+            loading="lazy"
+            style={{ borderRadius: '12px' }}
           ></iframe>
         </div>
       </div>
@@ -121,15 +181,12 @@ function App() {
                 'Xb5mdtCFzDc'
               ]} 
             />
-            <VideoCarousel 
+            <SpotifyCarousel 
               title="Composition" 
-              videoIds={[
-                'aMqrpzTirok',
-                'hQpKckAC-3Y',
-                '_GRvuWUAwEo',
-                '6wvPF80r0vk',
-                'BjlTkkZUgSU',
-                '8_HIGilSTM8'
+              albumIds={[
+                '64QztYQsOvF2xWpMA4POGS',
+                '0BSUEwHoYzb1Z1eVNtJBVE',
+                '5DX9uiununYttXP7RM9GCA'
               ]} 
             />
             <VideoCarousel 
