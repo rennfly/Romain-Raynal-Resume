@@ -4,7 +4,7 @@ export const resumeData: ResumeData = {
   name: "Romain Raynal",
   title: "Composer, Producer & Sound Designer",
   avatarUrl: "https://drive.google.com/thumbnail?id=11oUP7a-5BWNktFp5q46VF9R7zudEr3kw&sz=w1000", 
-  cvUrl: "https://drive.google.com/uc?export=download&id=1YxiaGbHf5EyVLCjaSDD9-xAKJbJSMvrb",
+  cvUrl: "https://drive.google.com/file/d/15lVcr8A5LE7BYoH_bJjlZNbDWIlUpuhw/view?usp=sharing",
   contact: {
     location: "Sigean (Aude), France",
     phone: "06.63.68.03.30",
@@ -13,8 +13,19 @@ export const resumeData: ResumeData = {
     portfolioUrl: "https://www.romainraynal.fr/portfolio"
   },
   summary: "I present here a selection of projects illustrating my work in <strong>sound design</strong>, <strong>composition</strong>, and <strong>music design</strong>. My approach emphasises the care taken in the execution and attention to detail, with the aim of creating <strong>immersive sound experiences</strong> that serve the <strong>narrative</strong> and <strong>engage the player</strong>.",
-  fullBio: "I am <strong>Romain Raynal</strong>, a <strong>composer</strong>, <strong>producer</strong>, and <strong>sound designer</strong> based in Sigean, Aude, France. I studied at the conservatory and worked as a freelance musician for nearly 15 years. In 2017, I completed a <strong>mixing course</strong> at the CFSM Center in Lyon before founding my studio. In 2021, I earned a <strong>certification in film scoring</strong> from Studio Cap’ in Paris and became <strong>Wwise Certified</strong>, while also acquiring proficiency in <strong>FMOD</strong>.\n\nSince 2023, I have contributed to titles such as The Green Room Experiment, Just a Guy, and Transhumance (Ukiyo). In 2024, I worked on the mobile game Need For Touring and the musical shooter LavaLoop. Recently, I handled <strong>linear sound design</strong> for <strong>Unreal cinematics</strong> and composed <strong>diegetic music</strong> for fictional media inserts on an unannounced AA title (<strong>Arcades Sound</strong>).\n\nMy latest ongoing project is <strong>Maestro</strong> (<strong>Arcades Sound</strong>, Double Jack), where I work as a <strong>sound designer</strong> and <strong>mix engineer</strong>. I also share my technical expertise through an upcoming <strong>Audiokinetic blog post</strong> and an <strong>FMOD and Unreal Engine audio course</strong> I authored for Slope.",
+  fullBio: "I am <strong>Romain Raynal</strong>, a <strong>composer</strong>, <strong>producer</strong>, and <strong>sound designer</strong> based in Sigean, Aude, France. I studied at the conservatory and worked as a freelance musician for nearly 15 years. In 2017, I completed a <strong>mixing course</strong> at the CFSM Center in Lyon before founding my studio. In 2021, I earned a <strong>certification in film scoring</strong> from Studio Cap’ in Paris and became <strong>Wwise Certified</strong>, while also acquiring proficiency in <strong>FMOD</strong>.\n\nSince 2023, I have contributed to titles such as The Green Room Experiment, Just a Guy, and Transhumance (Ukiyo). In 2024, I worked on the mobile game Need For Touring and the musical shooter LavaLoop. Recently, I worked as a <strong>Voice Designer</strong> on a cultural VR project and composed <strong>diegetic music</strong> for fictional media inserts on an unannounced AA title (<strong>Arcades Sound</strong>). My latest ongoing project is <strong>Maestro</strong> (<strong>Arcades Sound</strong>, Double Jack), where I work as a <strong>sound designer</strong> and <strong>mix engineer</strong>. I also contributed as an <strong>additional sound designer</strong> on <strong>Solasta II</strong> with <strong>Arcades Sound</strong> and <strong>Tactical Adventures</strong>.\n\nI also share my technical expertise through an upcoming <strong>Audiokinetic blog post</strong> and an <strong>FMOD and Unreal Engine audio course</strong> I authored for Slope.",
   experience: [
+    {
+      id: "solasta-ii",
+      role: "Additional Sound Designer",
+      projectName: "Solasta II",
+      company: "Arcades Sound, Tactical Adventures",
+      period: "2025",
+      url: "https://store.steampowered.com/app/2975950/Solasta_II/",
+      details: [
+        "Cinematic Sound Design: Linear audio post-production for Unreal Engine cutscenes (Reaper workflow)."
+      ]
+    },
     {
       id: "arcade-sounds",
       role: "Sound Designer, Composer",
@@ -23,7 +34,7 @@ export const resumeData: ResumeData = {
       period: "Since 11/2025",
       url: "https://www.arcades-sound.fr/",
       details: [
-        "Cinematic Sound Design: Linear audio post-production for Unreal Engine cutscenes (Reaper workflow).",
+        "Voice Designer on a cultural VR project.",
         "Music Composition: Created themes for short narrative capsules."
       ]
     },
