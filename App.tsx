@@ -47,7 +47,7 @@ const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] 
       </h4>
       
       <div className="relative">
-        <div className="h-[152px] w-full rounded-lg overflow-hidden border border-[#171F1C]/10 bg-black shadow-sm relative z-0">
+        <div className="aspect-video w-full rounded-lg overflow-hidden border border-[#171F1C]/10 bg-black shadow-sm relative z-0">
           <iframe 
             key={videoIds[currentIndex]} // Force reload on change
             src={`https://www.youtube.com/embed/${videoIds[currentIndex]}`}
@@ -106,7 +106,7 @@ const SpotifyCarousel = ({ title, albumIds }: { title: string, albumIds: string[
       </h4>
       
       <div className="relative">
-        <div className="h-[152px] w-full rounded-xl overflow-hidden shadow-sm relative z-0">
+        <div className="h-[352px] w-full rounded-xl overflow-hidden shadow-sm relative z-0 bg-[#282828]">
           <iframe 
             key={albumIds[currentIndex]} // Force reload on change
             src={`https://open.spotify.com/embed/album/${albumIds[currentIndex]}?utm_source=generator`}
@@ -168,35 +168,47 @@ function App() {
 
         {/* Portfolio Section */}
         <Section title="Portfolio" icon={<PlayCircle size={24} />}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white/20 p-6 rounded-xl border border-[#171F1C]/5">
-            <VideoCarousel 
-              title="Sound Design" 
-              videoIds={[
-                'DT-2ucQjcfU',
-                'DGEmeXu2wSI',
-                'wsPgfT2Vj8Q',
-                'UX-CkAX8GB0',
-                'beoz9yPgYsg',
-                'uoFpSvnUjCQ',
-                'Xb5mdtCFzDc'
-              ]} 
-            />
-            <SpotifyCarousel 
-              title="Composition" 
-              albumIds={[
-                '64QztYQsOvF2xWpMA4POGS',
-                '0BSUEwHoYzb1Z1eVNtJBVE',
-                '5DX9uiununYttXP7RM9GCA'
-              ]} 
-            />
-            <VideoCarousel 
-              title="Music Design" 
-              videoIds={[
-                'U33Eb9WWaPo',
-                'olMWCwbhGm0',
-                'pYCcWYQ2fZ8'
-              ]} 
-            />
+          <div className="bg-white/30 p-8 md:p-10 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-6">
+            {/* Videos Row (Side by Side) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <VideoCarousel 
+                title="Sound Design" 
+                videoIds={[
+                  'DT-2ucQjcfU',
+                  'DGEmeXu2wSI',
+                  'wsPgfT2Vj8Q',
+                  'UX-CkAX8GB0',
+                  'beoz9yPgYsg',
+                  'uoFpSvnUjCQ',
+                  'Xb5mdtCFzDc'
+                ]} 
+              />
+              <VideoCarousel 
+                title="Music Design" 
+                videoIds={[
+                  'U33Eb9WWaPo',
+                  'olMWCwbhGm0',
+                  'pYCcWYQ2fZ8'
+                ]} 
+              />
+            </div>
+
+            {/* Divider */}
+            <div className="w-full h-px bg-[#171F1C]/10 rounded-full" />
+
+            {/* Spotify Row (Full Width) */}
+            <div className="w-full">
+              <SpotifyCarousel 
+                title="Composition" 
+                albumIds={[
+                  '4F27WSGIzvKTXlKK1JGXNa',
+                  '0BSUEwHoYzb1Z1eVNtJBVE',
+                  '64QztYQsOvF2xWpMA4POGS',
+                  '5DX9uiununYttXP7RM9GCA',
+                  '1bNWcbTwqRPj9n9fWmK1X5'
+                ]} 
+              />
+            </div>
           </div>
         </Section>
 
