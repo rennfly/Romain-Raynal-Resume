@@ -148,7 +148,7 @@ function App() {
             
             <button 
               onClick={() => setIsBioOpen(!isBioOpen)}
-              className="flex items-center gap-2 text-[#92400E] font-bold text-sm uppercase tracking-widest hover:translate-x-1 transition-transform print:hidden"
+              className="flex items-center gap-2 text-[#92400E] font-bold text-sm uppercase tracking-widest hover:translate-x-1 transition-transform"
             >
               {isBioOpen ? (
                 <><ChevronUp size={16}/> Show less</>
@@ -157,7 +157,7 @@ function App() {
               )}
             </button>
 
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isBioOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'} print:max-h-none print:opacity-100 print:pointer-events-auto`}>
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isBioOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
               <div 
                 className="pt-4 border-t border-[#171F1C]/5 text-[#171F1C]/70 leading-relaxed text-justify space-y-4"
                 dangerouslySetInnerHTML={{ __html: resumeData.fullBio.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br/>')}</p>`).join('') }}
@@ -167,9 +167,8 @@ function App() {
         </Section>
 
         {/* Portfolio Section */}
-        <div className="print:hidden">
-          <Section title="Portfolio" icon={<PlayCircle size={24} />}>
-            <div className="bg-white/30 p-8 md:p-10 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-6">
+        <Section title="Portfolio" icon={<PlayCircle size={24} />}>
+          <div className="bg-white/30 p-8 md:p-10 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-6">
               {/* Videos Row (Side by Side) */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <VideoCarousel 
@@ -212,7 +211,6 @@ function App() {
               </div>
             </div>
           </Section>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           
@@ -262,7 +260,7 @@ function App() {
                             className="text-[#92400E] opacity-50 group-hover:opacity-100 transition-opacity"
                             title="View Certificate"
                           >
-                            <FileText size={16} className="print:hidden" />
+                            <FileText size={16} />
                           </a>
                         )}
                       </h3>
@@ -288,8 +286,8 @@ function App() {
             </Section>
 
              {/* Download PDF Action */}
-             <div className="mt-8 pt-8 border-t border-[#171F1C]/10 print:hidden flex flex-col gap-4">
-               {resumeData.cvUrl && (
+             {resumeData.cvUrl && (
+               <div className="mt-8 pt-8 border-t border-[#171F1C]/10">
                   <a 
                     href={resumeData.cvUrl} 
                     target="_blank"
@@ -299,15 +297,8 @@ function App() {
                     <Download size={18} className="group-hover:scale-110 transition-transform" />
                     <span>Download Full Resume</span>
                   </a>
-               )}
-                <button 
-                  onClick={() => window.print()}
-                  className="w-full py-4 px-4 bg-white hover:bg-gray-50 text-[#171F1C] border border-[#171F1C]/20 font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm hover:shadow group"
-                >
-                  <FileText size={18} className="group-hover:scale-110 transition-transform" />
-                  <span>Print this page as PDF</span>
-                </button>
-             </div>
+               </div>
+             )}
 
           </div>
         </div>

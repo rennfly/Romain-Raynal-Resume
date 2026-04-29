@@ -38,7 +38,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ data }) => {
                        className="block sm:inline text-[#92400E] font-medium tracking-wide hover:underline mt-1 sm:mt-0"
                      >
                        {data.projectName}
-                       <ExternalLink size={14} className="opacity-60 inline-block ml-1.5 -translate-y-[1px] print:hidden" />
+                       <ExternalLink size={14} className="opacity-60 inline-block ml-1.5 -translate-y-[1px]" />
                      </a>
                    ) : (
                      <span className="block sm:inline text-[#92400E] font-medium tracking-wide mt-1 sm:mt-0">{data.projectName}</span>
@@ -54,21 +54,19 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ data }) => {
 
           <div className="flex items-center gap-2 text-[#171F1C]/50 text-xs font-bold uppercase tracking-wider bg-[#E2DACF]/30 px-3 py-1 rounded-full self-start md:self-auto whitespace-nowrap mt-2 md:mt-0 shrink-0">
             {data.period}
-            <span className="print:hidden">
-              {isOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-            </span>
+            {isOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </div>
         </div>
 
         {!isOpen && (
-          <p className="text-[#171F1C]/40 text-sm mt-2 italic group-hover:text-[#171F1C]/60 transition-colors print:hidden">
+          <p className="text-[#171F1C]/40 text-sm mt-2 italic group-hover:text-[#171F1C]/60 transition-colors">
             Click to view details...
           </p>
         )}
       </div>
 
       <div 
-        className={`overflow-hidden transition-all duration-300 ease-in-out print:max-h-none print:opacity-100 print:mt-4 ${
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
         }`}
       >
