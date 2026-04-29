@@ -21,6 +21,7 @@ export const resumeData: ResumeData = {
       projectName: "Aphelion",
       company: "Arcades Sound, Don't Nod",
       period: "2026",
+      url: "https://dont-nod.com/fr/games/aphelion-fr/",
       details: [
         "Additional sound design and audio production."
       ]
