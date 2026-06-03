@@ -168,7 +168,7 @@ function App() {
 
         {/* Portfolio Section */}
         <Section id="portfolio" title="Portfolio" icon={<PlayCircle size={24} />}>
-          <div className="bg-white/30 p-8 md:p-10 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-10 md:gap-12">
+          <div className="bg-white/30 p-6 md:p-8 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-6 md:gap-8">
               {/* Spotify Row (Full Width, Moved up) */}
               <div className="w-full max-w-3xl mx-auto">
                 <SpotifyCarousel 
