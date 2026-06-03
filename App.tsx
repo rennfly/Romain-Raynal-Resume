@@ -106,7 +106,7 @@ const SpotifyCarousel = ({ title, items }: { title: string, items: { type: strin
       </h4>
       
       <div className="relative">
-        <div className="h-[450px] md:h-[500px] w-full rounded-xl overflow-hidden shadow-sm relative z-0 bg-[#282828]">
+        <div className="h-[400px] w-full rounded-xl overflow-hidden shadow-sm relative z-0 bg-[#282828]">
           <iframe 
             key={items[currentIndex].id} // Force reload on change
             src={`https://open.spotify.com/embed/${items[currentIndex].type}/${items[currentIndex].id}?utm_source=generator`}
@@ -170,7 +170,7 @@ function App() {
         <Section id="portfolio" title="Portfolio" icon={<PlayCircle size={24} />}>
           <div className="bg-white/30 p-8 md:p-10 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-10 md:gap-12">
               {/* Spotify Row (Full Width, Moved up) */}
-              <div className="w-full">
+              <div className="w-full max-w-3xl mx-auto">
                 <SpotifyCarousel 
                   title="Composition" 
                   items={[
@@ -185,10 +185,10 @@ function App() {
               </div>
 
               {/* Divider */}
-              <div className="w-full h-px bg-[#171F1C]/10 rounded-full" />
+              <div className="w-full h-px bg-[#171F1C]/10 rounded-full max-w-3xl mx-auto" />
 
               {/* Videos Row (Full Width) */}
-              <div className="w-full">
+              <div className="w-full max-w-3xl mx-auto">
                 <VideoCarousel 
                   title="Sound Design" 
                   videoIds={[
