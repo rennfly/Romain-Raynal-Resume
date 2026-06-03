@@ -5,11 +5,12 @@ interface SectionProps {
   children: React.ReactNode;
   className?: string;
   icon?: React.ReactNode;
+  id?: string;
 }
 
-export const Section: React.FC<SectionProps> = ({ title, children, className = "", icon }) => {
+export const Section: React.FC<SectionProps> = ({ title, children, className = "", icon, id }) => {
   return (
-    <section className={`mb-12 ${className}`}>
+    <section id={id} className={`mb-12 scroll-mt-24 ${className}`}>
       <div className="flex items-center gap-3 mb-6 border-b border-[#171F1C]/10 pb-3">
         {icon && <span className="text-[#92400E]">{icon}</span>}
         <h2 className="text-xl font-bold text-[#171F1C] uppercase tracking-[0.2em]">{title}</h2>

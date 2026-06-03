@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, ArrowDown, Briefcase } from 'lucide-react';
 import { ContactInfo } from '../types';
 
 interface HeaderProps {
@@ -75,6 +75,19 @@ export const Header: React.FC<HeaderProps> = ({ name, title, contact, avatarUrl 
               <a href={`https://${contact.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#92400E] transition-colors">
                 <Globe size={16} className="text-[#92400E] shrink-0" />
                 <span>{contact.website}</span>
+              </a>
+            </div>
+
+            {/* Subtle Jump to Experience */}
+            <div className="pt-2 print:hidden">
+              <a 
+                href="#experience" 
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 hover:bg-white text-[#171F1C]/80 font-bold text-xs uppercase tracking-[0.1em] rounded-full border border-[#171F1C]/10 shadow-sm hover:shadow transition-all group"
+                title="Jump to Experiences"
+              >
+                <Briefcase size={14} className="text-[#92400E]" />
+                <span>Experiences</span>
+                <ArrowDown size={14} className="text-[#92400E] group-hover:translate-y-0.5 transition-transform" />
               </a>
             </div>
           </div>

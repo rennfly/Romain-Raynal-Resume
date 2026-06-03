@@ -64,15 +64,15 @@ const VideoCarousel = ({ title, videoIds }: { title: string, videoIds: string[] 
   );
 };
 
-const SpotifyCarousel = ({ title, albumIds }: { title: string, albumIds: string[] }) => {
+const SpotifyCarousel = ({ title, items }: { title: string, items: { type: string, id: string }[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextAlbum = () => {
-    setCurrentIndex((prev) => (prev + 1) % albumIds.length);
+  const nextItem = () => {
+    setCurrentIndex((prev) => (prev + 1) % items.length);
   };
 
-  const prevAlbum = () => {
-    setCurrentIndex((prev) => (prev - 1 + albumIds.length) % albumIds.length);
+  const prevItem = () => {
+    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
 
   return (
@@ -82,22 +82,22 @@ const SpotifyCarousel = ({ title, albumIds }: { title: string, albumIds: string[
           <Music size={16} className="text-[#92400E]" />
           {title}
         </span>
-        {albumIds.length > 1 && (
+        {items.length > 1 && (
           <div className="flex items-center gap-1 bg-white/60 border border-[#171F1C]/10 rounded-md px-1 py-0.5 shadow-sm">
             <button 
-              onClick={prevAlbum}
+              onClick={prevItem}
               className="text-[#171F1C]/70 hover:text-[#92400E] transition-colors p-1 hover:bg-black/5 rounded"
-              aria-label="Previous album"
+              aria-label="Previous item"
             >
               <ChevronLeft size={14} />
             </button>
             <span className="text-xs text-[#171F1C]/70 font-semibold normal-case min-w-[32px] text-center select-none tabular-nums">
-              {currentIndex + 1} / {albumIds.length}
+              {currentIndex + 1} / {items.length}
             </span>
             <button 
-              onClick={nextAlbum}
+              onClick={nextItem}
               className="text-[#171F1C]/70 hover:text-[#92400E] transition-colors p-1 hover:bg-black/5 rounded"
-              aria-label="Next album"
+              aria-label="Next item"
             >
               <ChevronRight size={14} />
             </button>
@@ -106,11 +106,11 @@ const SpotifyCarousel = ({ title, albumIds }: { title: string, albumIds: string[
       </h4>
       
       <div className="relative">
-        <div className="h-[352px] w-full rounded-xl overflow-hidden shadow-sm relative z-0 bg-[#282828]">
+        <div className="h-[450px] md:h-[500px] w-full rounded-xl overflow-hidden shadow-sm relative z-0 bg-[#282828]">
           <iframe 
-            key={albumIds[currentIndex]} // Force reload on change
-            src={`https://open.spotify.com/embed/album/${albumIds[currentIndex]}?utm_source=generator`}
-            title={`${title} - Album ${currentIndex + 1}`}
+            key={items[currentIndex].id} // Force reload on change
+            src={`https://open.spotify.com/embed/${items[currentIndex].type}/${items[currentIndex].id}?utm_source=generator`}
+            title={`${title} - Item ${currentIndex + 1}`}
             className="w-full h-full"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -139,7 +139,7 @@ function App() {
       <main className="max-w-6xl mx-auto px-6 md:px-12 py-12">
         
         {/* Summary Section with Expandable Bio */}
-        <Section title="Summary" icon={<User size={24} />}>
+        <Section id="summary" title="Summary" icon={<User size={24} />}>
           <div className="bg-white/40 p-6 rounded-lg border border-[#171F1C]/5 shadow-sm space-y-4">
             <p 
               className="leading-relaxed text-lg text-[#171F1C]/80 text-justify"
@@ -167,10 +167,28 @@ function App() {
         </Section>
 
         {/* Portfolio Section */}
-        <Section title="Portfolio" icon={<PlayCircle size={24} />}>
-          <div className="bg-white/30 p-8 md:p-10 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-6">
-              {/* Videos Row (Side by Side) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Section id="portfolio" title="Portfolio" icon={<PlayCircle size={24} />}>
+          <div className="bg-white/30 p-8 md:p-10 rounded-2xl border border-[#171F1C]/10 shadow-sm flex flex-col gap-10 md:gap-12">
+              {/* Spotify Row (Full Width, Moved up) */}
+              <div className="w-full">
+                <SpotifyCarousel 
+                  title="Composition" 
+                  items={[
+                    { type: 'playlist', id: '2Sai5BRThL41Xgq3ujVSdi' },
+                    { type: 'album', id: '4F27WSGIzvKTXlKK1JGXNa' },
+                    { type: 'album', id: '0BSUEwHoYzb1Z1eVNtJBVE' },
+                    { type: 'album', id: '64QztYQsOvF2xWpMA4POGS' },
+                    { type: 'album', id: '5DX9uiununYttXP7RM9GCA' },
+                    { type: 'album', id: '1bNWcbTwqRPj9n9fWmK1X5' }
+                  ]} 
+                />
+              </div>
+
+              {/* Divider */}
+              <div className="w-full h-px bg-[#171F1C]/10 rounded-full" />
+
+              {/* Videos Row (Full Width) */}
+              <div className="w-full">
                 <VideoCarousel 
                   title="Sound Design" 
                   videoIds={[
@@ -183,6 +201,11 @@ function App() {
                     'Xb5mdtCFzDc'
                   ]} 
                 />
+              </div>
+
+              {/* Music Design Row (Commented Out) */}
+              {/* 
+              <div className="w-full hidden">
                 <VideoCarousel 
                   title="Music Design" 
                   videoIds={[
@@ -192,23 +215,7 @@ function App() {
                   ]} 
                 />
               </div>
-
-              {/* Divider */}
-              <div className="w-full h-px bg-[#171F1C]/10 rounded-full" />
-
-              {/* Spotify Row (Full Width) */}
-              <div className="w-full">
-                <SpotifyCarousel 
-                  title="Composition" 
-                  albumIds={[
-                    '4F27WSGIzvKTXlKK1JGXNa',
-                    '0BSUEwHoYzb1Z1eVNtJBVE',
-                    '64QztYQsOvF2xWpMA4POGS',
-                    '5DX9uiununYttXP7RM9GCA',
-                    '1bNWcbTwqRPj9n9fWmK1X5'
-                  ]} 
-                />
-              </div>
+              */}
             </div>
           </Section>
 
@@ -216,7 +223,7 @@ function App() {
           
           {/* Left Column: Experience */}
           <div className="lg:col-span-2">
-            <Section title="Experience" icon={<Briefcase size={24} />}>
+            <Section id="experience" title="Experience" icon={<Briefcase size={24} />}>
               <div className="space-y-2">
                 {resumeData.experience.map((exp) => (
                   <ExperienceItem key={exp.id} data={exp} />
