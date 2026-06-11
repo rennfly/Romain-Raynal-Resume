@@ -192,6 +192,7 @@ function App() {
                 <VideoCarousel 
                   title="Sound Design" 
                   videoIds={[
+                    'CM8nsYm0j24',
                     'DT-2ucQjcfU',
                     'DGEmeXu2wSI',
                     'wsPgfT2Vj8Q',
