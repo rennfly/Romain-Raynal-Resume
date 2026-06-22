@@ -42,7 +42,7 @@ export const resumeData: ResumeData = {
       role: "Sound Designer, Composer",
       projectName: "Unannounced AA Titles (NDA)",
       company: "Arcades Sound",
-      period: "Since 11/2025",
+      period: "2025",
       url: "https://www.arcades-sound.fr/",
       details: [
         "Voice Designer on a cultural VR project.",
@@ -54,7 +54,7 @@ export const resumeData: ResumeData = {
       role: "Sound Designer & Mix Engineer",
       projectName: "Maestro",
       company: "Arcades Sound, Double Jack",
-      period: "Since 09/2025",
+      period: "2025",
       url: "https://maestro-game.com/",
       details: [
         "Designed and produced original sound assets.",
@@ -66,7 +66,7 @@ export const resumeData: ResumeData = {
       role: "Trainer & Content Creator",
       projectName: "FMOD Online Course",
       company: "Slope Training (France)",
-      period: "Since 08/2025",
+      period: "2025",
       url: "https://slopetraining.com/",
       details: [
         "Designed and produced a comprehensive video training course on FMOD middleware.",
@@ -79,7 +79,7 @@ export const resumeData: ResumeData = {
       role: "Sound Designer",
       projectName: "Persevere",
       company: "Universe or Nothing Limited (Ireland)",
-      period: "Since 08/2025",
+      period: "2025",
       url: "https://perseveregame.com/",
       details: [
         "Designed and produced original sound assets for sci-fi environments.",
@@ -91,7 +91,7 @@ export const resumeData: ResumeData = {
       role: "Composer & Sound Designer",
       projectName: "Witch Hunters",
       company: "Awesome Game Concepts (France)",
-      period: "Since 02/2025",
+      period: "2025",
       url: "https://store.steampowered.com/app/3528000/Witch_Hunters/",
       details: [
         "Defined and implemented the audio direction in FMOD.",
@@ -99,11 +99,23 @@ export const resumeData: ResumeData = {
       ]
     },
     {
+      id: "amanclo-3",
+      role: "Sound Designer & Composer",
+      projectName: "The Green Room Experiment Ep3",
+      company: "Amanclo Video Games",
+      period: "2025",
+      url: "https://store.steampowered.com/curator/44733926",
+      details: [
+        "Created ambient soundscapes for a first-person puzzle series.",
+        "Composed non-diegetic music for in-game sequences and marketing trailers."
+      ]
+    },
+    {
       id: "fractal",
       role: "Sound Designer",
       projectName: "LavaLoop",
       company: "Fractal Edge Music / Louis Rigaud",
-      period: "09/2024 - 12/2024",
+      period: "2024",
       url: "https://store.steampowered.com/app/3017100/LavaLoop/",
       details: [
         "Designed and integrated rhythmic sound assets for a musical shooter.",
@@ -116,7 +128,7 @@ export const resumeData: ResumeData = {
       role: "Audio Producer",
       projectName: "Need for Touring",
       company: "Awesome Game Concepts, Carfooly",
-      period: "07/2024 - 09/2024",
+      period: "2024",
       url: "https://needfortouring.com/",
       details: [
         "Audio direction lead for a F2P mobile racing game.",
@@ -129,7 +141,7 @@ export const resumeData: ResumeData = {
       role: "Sound Designer",
       projectName: "Transhumance",
       company: "Ukiyo Studio",
-      period: "05/2024 - 07/2024",
+      period: "2024",
       url: "https://afjv.com/societe/1381-ukiyo-studio.htm",
       details: [
         "Recorded and designed original sound assets.",
@@ -138,15 +150,48 @@ export const resumeData: ResumeData = {
       ]
     },
     {
-      id: "amanclo",
+      id: "amanclo-2",
       role: "Sound Designer & Composer",
-      projectName: "The Green Room Experiment",
+      projectName: "The Green Room Experiment Ep2",
       company: "Amanclo Video Games",
-      period: "Since 01/2023",
+      period: "2024",
       url: "https://store.steampowered.com/curator/44733926",
       details: [
         "Created ambient soundscapes for a first-person puzzle series.",
         "Composed non-diegetic music for in-game sequences and marketing trailers."
+      ]
+    },
+    {
+      id: "amanclo",
+      role: "Sound Designer & Composer",
+      projectName: "The Green Room Experiment Ep1",
+      company: "Amanclo Video Games",
+      period: "2023",
+      url: "https://store.steampowered.com/curator/44733926",
+      details: [
+        "Created ambient soundscapes for a first-person puzzle series.",
+        "Composed non-diegetic music for in-game sequences and marketing trailers."
+      ]
+    },
+    {
+      id: "justaguy",
+      role: "Composer",
+      projectName: "Just a Guy",
+      company: "Monky Games",
+      period: "2023",
+      url: "https://store.steampowered.com/app/1578970/JUST_A_GUY___Online_Multiplayer_Ragdoll_Game",
+      details: [
+        "Composed music, notably for the game trailers."
+      ]
+    },
+    {
+      id: "stranded",
+      role: "Composer",
+      projectName: "Stranded on an Island",
+      company: "Awesome Game Concepts",
+      period: "2023",
+      details: [
+        "Composed interactive music and integrated it using FMOD."
       ]
     }
   ],
